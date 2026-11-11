@@ -992,10 +992,10 @@ html[dir="rtl"] .arw { transform: scaleX(-1); }
   .charter.has-wings .wing-left { left: 34px; } .charter.has-wings .wing-right { right: 34px; }
 }
 /* Header: full bilingual logo */
-.brand img.brand-full { width: auto; height: 128px; object-fit: contain; mix-blend-mode: normal; }
+.brand img.brand-full { width: auto; height: 168px; object-fit: contain; mix-blend-mode: normal; }
 .site-header .wrap { padding-block: 6px; }
-@media (max-width: 1100px) { .brand img.brand-full { height: 96px; } }
-@media (max-width: 760px) { .brand img.brand-full { height: 76px; } }
+@media (max-width: 1100px) { .brand img.brand-full { height: 120px; } }
+@media (max-width: 760px) { .brand img.brand-full { height: 92px; } }
 
 /* =================== Colour v2: navy-to-blue gradients across the site =================== */
 :root {
