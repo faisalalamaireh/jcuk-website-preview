@@ -1155,3 +1155,14 @@ html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3, html[lang="ar"] h4 {
 .seal .date-big, .register dt, .fees .fee, .steps li::before, .person h3, .figure b, .timeline li::before,
 .coming-item strong, .mini-seal .ms-day, .press-list a, .month-title, .row-story h4, .pn strong, .ch-value,
 .directory tbody th { font-weight: 700; font-variation-settings: "opsz" 11; }
+
+/* =================== Engravings draw themselves in when scrolled into view =================== */
+@keyframes draw-in { from { -webkit-mask-position: 100% 0; mask-position: 100% 0; } to { -webkit-mask-position: 0 0; mask-position: 0 0; } }
+html.js-draw img.draw:not(.drawn-done) {
+  -webkit-mask-image: linear-gradient(105deg, #000 38%, rgba(0,0,0,.35) 46%, transparent 58%);
+          mask-image: linear-gradient(105deg, #000 38%, rgba(0,0,0,.35) 46%, transparent 58%);
+  -webkit-mask-size: 260% 100%; mask-size: 260% 100%;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: 100% 0; mask-position: 100% 0;
+}
+html.js-draw img.draw.drawn:not(.drawn-done) { animation-name: draw-in; animation-duration: 2.4s; animation-timing-function: cubic-bezier(.5, .1, .3, 1); animation-fill-mode: both; }
