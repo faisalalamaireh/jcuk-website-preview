@@ -1096,3 +1096,49 @@ body { background: #f0f5fd; }
 /* Footer: full logo on a white card */
 .foot-brand img.foot-logo { width: 300px; max-width: 100%; height: auto; background: #fff; border-radius: 14px; padding: 14px 18px; box-sizing: border-box; }
 @media (max-width: 760px) { .foot-brand img.foot-logo { width: 260px; } }
+
+/* =================== Phones: bigger, darker text =================== */
+@media (max-width: 760px) {
+  :root { --ink-soft: #2e3b52; --step--2: .8125rem; --step--1: .9375rem; }
+  body { font-size: 1.125rem; }
+  html[lang="ar"] body { font-size: 1.2rem; }
+  .lede, .charter.has-wings .lede { color: #2e3b52; }
+  /* small print up to a readable size */
+  .nr-meta, .nr-meta time, .nr-meta .cat, .story-meta, .story-meta time, .story-meta .cat,
+  .nr-byline, .nr-byline span, .person p, p.note, p.source, p.card-note, th, td,
+  .foot-bottom span, .pn span, .sc-sub, .req, small, .fees span:not(.fee), .topbar { font-size: .9375rem; }
+  .site-footer, .site-footer a, .site-footer p { font-size: 1rem; }
+  .site-footer p { color: #d5deeb; }
+  .tag { font-size: .75rem; }
+  /* sample membership card labels */
+  .mc-label, .mc-hint, .mc-hint span { font-size: 10.5px; }
+  .mc-title span { font-size: 12px; }
+  .mc-org, .mc-org span { font-size: 13.5px; }
+  .microtext { font-size: 10.5px; }
+  /* keep the wings clear of the heading */
+  .charter.has-wings .wing { height: 112px; }
+}
+@media (max-width: 760px) {
+  .nl-short, .nr-notice-link, .nr-h3 { font-size: .9375rem; }
+  .sc-sub { font-size: 14px; }
+}
+/* Phones: tables become stacked cards; wings sit clear of the heading */
+@media (max-width: 760px) {
+  .table-wrap { overflow-x: visible; border-top: 0; }
+  .table-wrap table, .table-wrap table:has(th:nth-child(4)) { min-width: 0; width: 100%; border-collapse: separate; border-spacing: 0; }
+  .table-wrap thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .table-wrap tr { display: block; background: #fff; border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; }
+  .table-wrap td { display: block; border: 0; padding: 6px 0; font-size: 1rem; line-height: 1.5; color: var(--ink); }
+  .table-wrap td:first-child { font-weight: 600; font-size: 1.0625rem; padding-top: 0; }
+  .table-wrap td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); margin-bottom: 2px; }
+  html[lang="ar"] .table-wrap td[data-label]::before { letter-spacing: 0; font-size: .85rem; }
+  .band-teal .table-wrap { background: transparent; padding-inline: 0; }
+  .charter.has-wings .wing { top: 76px; height: 100px; }
+  .charter.has-wings .emblem-wrap { margin-bottom: 8px; }
+}
+@media (max-width: 760px) {
+  .page-body, .page-body > *, .table-wrap { min-width: 0; max-width: 100%; }
+  .page-body { grid-template-columns: minmax(0, 1fr); }
+  .table-wrap table, .table-wrap tbody, .table-wrap tr, .table-wrap td { display: block; width: auto; }
+  .table-wrap td { white-space: normal; overflow-wrap: anywhere; }
+}
