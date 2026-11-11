@@ -1142,3 +1142,8 @@ body { background: #f0f5fd; }
   .table-wrap table, .table-wrap tbody, .table-wrap tr, .table-wrap td { display: block; width: auto; }
   .table-wrap td { white-space: normal; overflow-wrap: anywhere; }
 }
+
+/* =================== Darker secondary text everywhere =================== */
+:root { --ink-soft: #24314a; }
+.opener p, .lede, .charter.has-wings .lede, .page-body p, .prose p { color: #1f2b42; }
+@media (max-width: 760px) { :root { --ink-soft: #1f2b42; } }
