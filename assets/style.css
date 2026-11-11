@@ -969,3 +969,35 @@ html[dir="rtl"] .arw { transform: scaleX(-1); }
 @media (max-width: 1000px) { .more-grid { grid-template-columns: 1fr; gap: 32px; } .more-card .story-photo, .more-card .story-card { aspect-ratio: 16 / 8; } }
 .more-card .kind-portrait .sc-text { min-width: 0; }
 .more-card .kind-portrait .sc-big { font-size: clamp(1.4rem, 1rem + 1.2vw, 2rem); }
+
+/* =================== Landing: two flags meeting =================== */
+.charter.has-flags { position: relative; overflow: hidden; background: #0c1a33; padding-block: 44px 56px; }
+.charter.has-flags .wrap { position: relative; z-index: 2; }
+.charter.has-flags .flag { position: absolute; top: 0; bottom: 0; width: 58%; background-size: cover; background-repeat: no-repeat; z-index: 0; }
+.charter.has-flags .flag.jo { left: 0; background-position: left center; -webkit-mask: linear-gradient(90deg, #000 40%, transparent 100%); mask: linear-gradient(90deg, #000 40%, transparent 100%); }
+.charter.has-flags .flag.uk { right: 0; background-position: center; -webkit-mask: linear-gradient(270deg, #000 40%, transparent 100%); mask: linear-gradient(270deg, #000 40%, transparent 100%); }
+.charter.has-flags::after { content: ""; position: absolute; inset: 0; z-index: 1; background: radial-gradient(58% 78% at 50% 50%, rgba(12, 26, 51, .93) 32%, rgba(12, 26, 51, .58) 70%, rgba(12, 26, 51, .22) 100%); }
+.charter.has-flags .charter-frame { background: transparent; border-color: rgba(255, 255, 255, .55); outline-color: rgba(255, 255, 255, .3); }
+.charter.has-flags h1 { color: #fff; text-shadow: 0 2px 24px rgba(0, 0, 0, .35); }
+.charter.has-flags .lede { color: #e7edf5; }
+.charter.has-flags .microtext { color: #dfe7f1; }
+.charter.has-flags .microtext span + span::before { color: #fff; }
+.charter.has-flags .btn-primary { background: #fff; color: #0c1a33; border-color: #fff; }
+.charter.has-flags .btn-primary:hover { background: var(--teal-tint); border-color: var(--teal-tint); }
+.charter.has-flags .btn-ghost { color: #fff; border-color: rgba(255, 255, 255, .7); background: rgba(12, 26, 51, .25); }
+.charter.has-flags .btn-ghost:hover { background: rgba(255, 255, 255, .12); color: #fff; }
+.charter.has-flags .emblem-wrap::before { background: #fff; width: 64%; transform: translate(-50%, -44%); }
+.charter.has-flags .emblem-wrap .rosette { display: none; }
+.charter.has-flags :focus-visible { outline-color: #fff; }
+@media (max-width: 760px) {
+  .charter.has-flags .flag { width: 70%; }
+  .charter.has-flags::after { background: radial-gradient(70% 70% at 50% 45%, rgba(12, 26, 51, .94) 40%, rgba(12, 26, 51, .7) 80%, rgba(12, 26, 51, .45) 100%); }
+}
+/* Flags: brighter edges, and a top/bottom layout on phones */
+.charter.has-flags::after { background: radial-gradient(56% 80% at 50% 50%, rgba(12, 26, 51, .93) 30%, rgba(12, 26, 51, .5) 64%, rgba(12, 26, 51, .08) 100%); }
+@media (max-width: 760px) {
+  .charter.has-flags .flag { width: 100%; height: 46%; left: 0; right: 0; }
+  .charter.has-flags .flag.jo { top: 0; bottom: auto; background-position: left center; -webkit-mask: linear-gradient(180deg, #000 35%, transparent 100%); mask: linear-gradient(180deg, #000 35%, transparent 100%); }
+  .charter.has-flags .flag.uk { top: auto; bottom: 0; background-position: center; -webkit-mask: linear-gradient(0deg, #000 35%, transparent 100%); mask: linear-gradient(0deg, #000 35%, transparent 100%); }
+  .charter.has-flags::after { background: linear-gradient(180deg, rgba(12, 26, 51, .35) 0%, rgba(12, 26, 51, .9) 26%, rgba(12, 26, 51, .93) 74%, rgba(12, 26, 51, .35) 100%); }
+}
