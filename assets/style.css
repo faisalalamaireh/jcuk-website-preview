@@ -1001,3 +1001,81 @@ html[dir="rtl"] .arw { transform: scaleX(-1); }
   .charter.has-flags .flag.uk { top: auto; bottom: 0; background-position: center; -webkit-mask: linear-gradient(0deg, #000 35%, transparent 100%); mask: linear-gradient(0deg, #000 35%, transparent 100%); }
   .charter.has-flags::after { background: linear-gradient(180deg, rgba(12, 26, 51, .35) 0%, rgba(12, 26, 51, .9) 26%, rgba(12, 26, 51, .93) 74%, rgba(12, 26, 51, .35) 100%); }
 }
+
+/* =================== Colour v2: navy-to-blue gradients across the site =================== */
+:root {
+  --navy-deep: #0b1a33;
+  --grad-head: linear-gradient(120deg, #0b1a33 0%, #14306a 55%, #1c5a78 100%);
+  --grad-bold: linear-gradient(120deg, #14306a 0%, #1b6a80 100%);
+  --grad-band: linear-gradient(135deg, #0b1a33 0%, #14306a 62%, #21508f 100%);
+  --wash-a: linear-gradient(180deg, #ffffff 0%, #f0f5fd 100%);
+  --wash-b: linear-gradient(180deg, #e8f0fc 0%, #e2f1f3 100%);
+  --on-dark-soft: #cdd9ea;
+}
+body { background: #f0f5fd; }
+.topbar { background: var(--navy-deep); color: var(--on-dark-soft); border: 0; }
+.topbar a { color: var(--on-dark-soft); }
+.topbar a:hover { color: #fff; }
+
+/* Sections: soft blue washes instead of flat white */
+.section { background: var(--wash-a); }
+.section + .section { border-top: 0; }
+.band-teal, .band-sheet { background: var(--wash-b); }
+.status { background: linear-gradient(90deg, #e6eefc, #e3f2f3); border: 0; }
+.band-teal .table-wrap, .band-teal .directory { background: #fff; }
+
+/* Bold bands */
+.section.band-teal.section-tight:has(.figures) { background: var(--grad-bold); }
+.section.band-teal.section-tight:has(.figures) .figures { border-top-color: rgba(255, 255, 255, .45); }
+.section.band-teal.section-tight:has(.figures) .figure b { color: #fff; }
+.section.band-teal.section-tight:has(.figures) .figure span { color: rgba(255, 255, 255, .86); }
+.section.band-teal.section-tight:has(.figures) .figure + .figure { border-color: rgba(255, 255, 255, .28); }
+.band-navy { background: var(--grad-band); border: 0; }
+
+/* Inner page headers: deep gradient, white type, light engraving */
+.page-head { background: var(--grad-head); border-bottom: 0; color: #fff; }
+.page-head h1 { color: #fff; }
+.page-head p, .page-head .story-meta, .page-head .story-meta time { color: var(--on-dark-soft); }
+.page-head a { color: #fff; }
+.page-head .microtext { color: #b9cce6 !important; }
+.page-head .microtext span + span::before { color: #fff; }
+.page-head .wrap::after { border-color: rgba(255, 255, 255, .45); }
+.head-art { filter: invert(1) brightness(1.9) contrast(.9); opacity: .55; mix-blend-mode: screen; }
+.page-head::before { filter: invert(1); opacity: .08; }
+
+/* Footer */
+.site-footer { background: var(--navy-deep); color: var(--on-dark-soft); border-top: 0; box-shadow: none; margin-top: 0; }
+.site-footer h4 { color: #fff; }
+.site-footer a { color: #e6edf7; }
+.site-footer a:hover { color: #fff; }
+.foot-brand img { background: #fff; border-radius: 10px; padding: 6px; mix-blend-mode: normal; }
+.foot-bottom { border-top-color: rgba(255, 255, 255, .14); color: #9fb0c8; }
+
+/* News (magazine) */
+.nr-head { background: var(--grad-head); color: #fff; }
+.nr-head h1 { color: #fff; }
+.nr-head p { color: var(--on-dark-soft); }
+.nr-filters { color: #fff; }
+.nr-filters .chip { border-color: rgba(255, 255, 255, .55); color: #fff; }
+.nr-filters .chip[aria-pressed="true"] { background: #fff; color: var(--navy-deep); border-color: #fff; }
+.nr-notice { background: rgba(255, 255, 255, .1); color: #fff; }
+.nr-notice .dot { background: #7fd3e0; box-shadow: 0 0 0 4px rgba(127, 211, 224, .22); }
+.nr-notice-link { color: #fff; }
+.nr-split { background: var(--wash-a); }
+.nr-list { border-top-color: #14306a; }
+.nr-row a:hover, .nr-row.is-active a { background: #e3ecfb; }
+.nr-pictures { background: var(--grad-band); }
+.nr-press { background: #fff; }
+.nr-stay { background: var(--wash-b); }
+.nr-article-head { background: var(--grad-head); color: #fff; }
+.nr-article-head h1 { color: #fff; }
+.nr-article-head .nr-standfirst, .nr-article-head .nr-byline, .nr-article-head .nr-meta, .nr-article-head .nr-meta time::before { color: var(--on-dark-soft); }
+.nr-article-head .nr-meta .cat { color: #9fe0ea; }
+.nr-crumb a { color: #fff; }
+.nr-hero { margin-top: clamp(28px, 4vw, 48px); }
+.nr-body, .newsroom article { background: transparent; }
+.nr-gallery { background: var(--wash-b); }
+.nr-more { background: var(--wash-a); }
+
+/* Contact */
+.channels .channel { border-top-color: #14306a; border-bottom-color: #14306a; }
