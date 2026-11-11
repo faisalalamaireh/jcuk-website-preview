@@ -1155,3 +1155,17 @@ html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3, html[lang="ar"] h4 {
 .seal .date-big, .register dt, .fees .fee, .steps li::before, .person h3, .figure b, .timeline li::before,
 .coming-item strong, .mini-seal .ms-day, .press-list a, .month-title, .row-story h4, .pn strong, .ch-value,
 .directory tbody th { font-weight: 700; font-variation-settings: "opsz" 11; }
+
+/* =================== Home: flag wings wave gently =================== */
+@keyframes wing-wave {
+  0%   { rotate: 0deg;    scale: 1 1; }
+  25%  { rotate: -2.2deg; scale: 1.03 .99; }
+  50%  { rotate: .8deg;   scale: .98 1.01; }
+  75%  { rotate: -1.4deg; scale: 1.02 1; }
+  100% { rotate: 0deg;    scale: 1 1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .charter.has-wings .wing { animation: wing-wave 5.5s ease-in-out infinite; will-change: rotate, scale; }
+  .charter.has-wings .wing-left { transform-origin: 85% 95%; }
+  .charter.has-wings .wing-right { transform-origin: 15% 95%; animation-direction: reverse; animation-delay: -1.8s; }
+}
