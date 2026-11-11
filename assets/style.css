@@ -1147,3 +1147,11 @@ body { background: #f0f5fd; }
 :root { --ink-soft: #24314a; }
 .opener p, .lede, .charter.has-wings .lede, .page-body p, .prose p { color: #1f2b42; }
 @media (max-width: 760px) { :root { --ink-soft: #1f2b42; } }
+
+/* =================== Headings: solid, bolder letters (no hairlines) =================== */
+h1, h2, h3, h4, .opener h2, .page-head h1, .charter h1 { font-weight: 700; font-variation-settings: "opsz" 11; letter-spacing: -0.005em; }
+[style*="--display"], .fee, .figure b, .person h3, .person strong { font-variation-settings: "opsz" 11; }
+html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3, html[lang="ar"] h4 { font-weight: 700; }
+.seal .date-big, .register dt, .fees .fee, .steps li::before, .person h3, .figure b, .timeline li::before,
+.coming-item strong, .mini-seal .ms-day, .press-list a, .month-title, .row-story h4, .pn strong, .ch-value,
+.directory tbody th { font-weight: 700; font-variation-settings: "opsz" 11; }
