@@ -1039,3 +1039,12 @@ html[dir="rtl"] .arw { transform: scaleX(-1); }
   .nav { background: #eaf1fc; }
 }
 @media (max-width: 760px) { .site-header .wrap { padding-block: 8px; } }
+
+/* =================== Numbers in the regular font =================== */
+.figure b, .fees .fee, .steps li::before, .timeline li::before, .ch-value {
+  font-family: var(--body); font-weight: 600; font-variation-settings: normal; letter-spacing: -0.01em;
+}
+.figure b { line-height: 1.05; }
+@media (max-width: 760px) {
+  .figure b, .fees .fee, .steps li::before, .timeline li::before, .ch-value { font-weight: 600; font-variation-settings: normal; }
+}
