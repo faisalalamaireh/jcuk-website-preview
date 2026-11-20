@@ -972,3 +972,36 @@ html[dir="rtl"] .arw { transform: scaleX(-1); }
 
 /* Three figures after removing the election */
 @media (min-width: 861px) { .figures { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* =================== Phones: bigger, darker text =================== */
+@media (max-width: 760px) {
+  :root { --ink-soft: #1f2b42; --step--2: .8125rem; --step--1: .9375rem; }
+  body { font-size: 1.125rem; }
+  html[lang="ar"] body { font-size: 1.2rem; }
+  .lede, .opener p, .page-body p, .prose p { color: #1f2b42; }
+  /* small print up to a readable size */
+  .nr-meta, .nr-meta time, .nr-meta .cat, .story-meta, .story-meta time, .story-meta .cat,
+  .nr-byline, .nr-byline span, .person p, p.note, p.source, p.card-note, th, td,
+  .foot-bottom span, .pn span, .sc-sub, .req, small, .fees span:not(.fee), .topbar, .nr-h3 { font-size: .9375rem; }
+  .site-footer, .site-footer a, .site-footer p { font-size: 1rem; color: #1f2b42; }
+  .tag { font-size: .75rem; }
+  .mc-label, .mc-hint, .mc-hint span { font-size: 10.5px; }
+  .mc-title span { font-size: 12px; }
+  .mc-org, .mc-org span { font-size: 13.5px; }
+  .microtext { font-size: 10.5px; }
+  .sc-sub { font-size: 14px; }
+  /* tables become stacked cards */
+  .page-body, .page-body > *, .table-wrap { min-width: 0; max-width: 100%; }
+  .page-body { grid-template-columns: minmax(0, 1fr); }
+  .table-wrap { overflow-x: visible; border-top: 0; }
+  .table-wrap table, .table-wrap table:has(th:nth-child(4)) { min-width: 0; width: 100%; border-collapse: separate; border-spacing: 0; }
+  .table-wrap table, .table-wrap tbody, .table-wrap tr, .table-wrap td { display: block; width: auto; }
+  .table-wrap thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .table-wrap tr { background: #fff; border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; }
+  .table-wrap td { border: 0; padding: 6px 0; font-size: 1rem; line-height: 1.5; color: var(--ink); white-space: normal; overflow-wrap: anywhere; }
+  .table-wrap td:first-child { font-weight: 600; font-size: 1.0625rem; padding-top: 0; }
+  .table-wrap td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); margin-bottom: 2px; }
+  html[lang="ar"] .table-wrap td[data-label]::before { letter-spacing: 0; font-size: .85rem; }
+  .band-teal .table-wrap { background: transparent; padding-inline: 0; }
+}
+@media (max-width: 760px) { .story-meta .cat, .mz span { font-size: .9375rem; } }
