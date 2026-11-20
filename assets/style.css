@@ -1023,3 +1023,19 @@ html[dir="rtl"] .arw { transform: scaleX(-1); }
 .site-header .wrap { padding-block: 8px; }
 @media (max-width: 1100px) { .brand img.brand-full { height: 112px; } }
 @media (max-width: 760px) { .brand img.brand-full { height: 88px; } .site-header .wrap { padding-block: 6px; } }
+
+/* =================== Header: soft blue with a rounded menu =================== */
+.site-header { background: #eaf1fc; border-bottom: 0; }
+.site-header .wrap { padding-block: 12px; }
+@media (min-width: 1061px) {
+  .nav { background: #fff; border-radius: 999px; padding: 6px 6px 6px 16px; gap: 2px; box-shadow: 0 8px 26px rgba(20, 35, 60, .10); border: 1px solid #e3e9f3; }
+  [dir="rtl"] .nav { padding: 6px 16px 6px 6px; }
+  .nav a { font-size: .98rem; border-radius: 999px; border-bottom: 0; padding: 9px 13px; }
+  .nav a[aria-current="page"] { background: #eaf1fc; color: #14233c; font-weight: 600; }
+  .nav a.btn { border-radius: 999px; margin-inline-start: 8px; border-bottom: 0; }
+}
+@media (max-width: 1060px) {
+  .menu-toggle { background: #fff; border-radius: 999px; border-color: #c9d4e6; padding: 9px 18px; }
+  .nav { background: #eaf1fc; }
+}
+@media (max-width: 760px) { .site-header .wrap { padding-block: 8px; } }
