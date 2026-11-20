@@ -1017,3 +1017,9 @@ html[dir="rtl"] .arw { transform: scaleX(-1); }
   .rosette, .emblem-wrap .rosette { opacity: .08; }
   .site-header { background: #fff; }
 }
+
+/* =================== Header: full bilingual logo top left =================== */
+.brand img.brand-full { width: auto; height: 140px; object-fit: contain; mix-blend-mode: normal; }
+.site-header .wrap { padding-block: 8px; }
+@media (max-width: 1100px) { .brand img.brand-full { height: 112px; } }
+@media (max-width: 760px) { .brand img.brand-full { height: 88px; } .site-header .wrap { padding-block: 6px; } }
