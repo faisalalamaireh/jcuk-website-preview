@@ -1005,3 +1005,15 @@ html[dir="rtl"] .arw { transform: scaleX(-1); }
   .band-teal .table-wrap { background: transparent; padding-inline: 0; }
 }
 @media (max-width: 760px) { .story-meta .cat, .mz span { font-size: .9375rem; } }
+
+/* =================== Phones: solid letters, calmer pattern, solid header =================== */
+@media (max-width: 760px) {
+  h1, h2, h3, h4, .brand span, .register dt, .fees .fee, .steps li::before, .person h3, .figure b,
+  .timeline li::before, .coming-item strong, .press-list a, .month-title, .row-story h4, .pn strong,
+  .ch-value, .directory tbody th {
+    font-weight: 700; font-optical-sizing: none; font-variation-settings: "opsz" 11; letter-spacing: 0;
+  }
+  html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3, html[lang="ar"] h4 { font-weight: 700; }
+  .rosette, .emblem-wrap .rosette { opacity: .08; }
+  .site-header { background: #fff; }
+}
