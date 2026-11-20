@@ -969,3 +969,6 @@ html[dir="rtl"] .arw { transform: scaleX(-1); }
 @media (max-width: 1000px) { .more-grid { grid-template-columns: 1fr; gap: 32px; } .more-card .story-photo, .more-card .story-card { aspect-ratio: 16 / 8; } }
 .more-card .kind-portrait .sc-text { min-width: 0; }
 .more-card .kind-portrait .sc-big { font-size: clamp(1.4rem, 1rem + 1.2vw, 2rem); }
+
+/* Three figures after removing the election */
+@media (min-width: 861px) { .figures { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
