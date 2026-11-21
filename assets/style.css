@@ -1070,3 +1070,6 @@ body { background: var(--paper); }
 }
 .charter-frame > * { position: relative; z-index: 1; }
 @media (max-width: 760px) { .charter-frame::before { background-position: 30% center; opacity: .12; } }
+/* Inner page header pictures in colour */
+.head-art { mix-blend-mode: multiply; opacity: 1; }
+.colour-art { mix-blend-mode: multiply; }
