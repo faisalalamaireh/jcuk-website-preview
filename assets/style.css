@@ -1073,3 +1073,7 @@ body { background: var(--paper); }
 /* Inner page header pictures in colour */
 .head-art { mix-blend-mode: multiply; opacity: 1; }
 .colour-art { mix-blend-mode: multiply; }
+
+/* Tables: let the last column wrap so nothing runs off the side on computers */
+td:last-child { white-space: normal; }
+.fees .fee { white-space: nowrap; }
