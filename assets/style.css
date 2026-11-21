@@ -1048,3 +1048,25 @@ html[dir="rtl"] .arw { transform: scaleX(-1); }
 @media (max-width: 760px) {
   .figure b, .fees .fee, .steps li::before, .timeline li::before, .ch-value { font-weight: 600; font-variation-settings: normal; }
 }
+
+/* =================== Cream paper instead of white =================== */
+:root { --paper: #f8f4ea; --sheet: #f0eadc; }
+body { background: var(--paper); }
+.nav, .menu-toggle, .band-navy .btn-primary, .band-navy .chip[aria-pressed="true"] { background: #fbf8f1; }
+.band-navy .btn-primary, .band-navy .chip[aria-pressed="true"] { border-color: #fbf8f1; }
+@media (min-width: 1061px) { .nav { background: #fbf8f1; } }
+@media (max-width: 1060px) { .menu-toggle { background: #fbf8f1; } }
+@media (max-width: 760px) { .table-wrap tr { background: #fbf8f1; } }
+
+/* =================== Colour engravings and the Petra–London watermark =================== */
+.engravings img.colour-art { mix-blend-mode: multiply; }
+.charter-frame .rosette { display: none; }
+.charter-frame::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: url("art/petra-london-watermark.webp") center 35% / cover no-repeat;
+  opacity: .14; filter: saturate(.6);
+  -webkit-mask-image: radial-gradient(120% 95% at 50% 45%, #000 45%, transparent 100%);
+          mask-image: radial-gradient(120% 95% at 50% 45%, #000 45%, transparent 100%);
+}
+.charter-frame > * { position: relative; z-index: 1; }
+@media (max-width: 760px) { .charter-frame::before { background-position: 30% center; opacity: .12; } }
