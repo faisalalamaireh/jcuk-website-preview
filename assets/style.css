@@ -1077,3 +1077,23 @@ body { background: var(--paper); }
 /* Tables: let the last column wrap so nothing runs off the side on computers */
 td:last-child { white-space: normal; }
 .fees .fee { white-space: nowrap; }
+
+/* =================== Option 3: navy header, warm sand bands (replaces the light blue) =================== */
+:root { --teal-tint: #efe7d7; }
+.band-teal { background: #efe7d7; }
+.site-header { background: #14233c; border-bottom: 0; }
+.brand img.brand-full { background: #f8f4ea; border-radius: 12px; padding: 6px 10px; box-sizing: content-box; }
+.site-header .nav { background: #14233c; box-shadow: none; border-color: #2a3f63; }
+.site-header .nav a { color: #f3ede0; }
+.site-header .nav a:hover { color: #fff; }
+.site-header .nav a[aria-current="page"] { background: #24395c; color: #fff; }
+.site-header .nav a.lang { color: #f3ede0; }
+.site-header .nav a.btn { background: #f8f4ea; color: #14233c; border-color: #f8f4ea; }
+.site-header .nav a.btn:hover { background: #fff; color: #14233c; }
+.menu-toggle { background: #f8f4ea; color: #14233c; border-color: #f8f4ea; }
+.site-header :focus-visible { outline-color: #f3ede0; }
+@media (max-width: 1060px) {
+  .site-header .nav { background: #14233c; border-top: 1px solid #2a3f63; }
+  .site-header .nav a { border-bottom-color: #2a3f63; }
+  .brand img.brand-full { padding: 4px 8px; }
+}
