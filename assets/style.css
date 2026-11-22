@@ -1143,3 +1143,7 @@ html[dir="rtl"] .nr-row.is-active a { box-shadow: inset -4px 0 0 var(--gold); }
   .nr-row a, .nr-row.has-photo a { padding: 14px; border: 1px solid #d9ccb2; border-radius: 10px; background: #fbf8f1; }
   .nr-row.is-active a, .nr-row a:hover { background: #fbf8f1; box-shadow: none; border-color: #d9ccb2; }
 }
+/* Even darker gold, slightly stronger frame lines */
+:root { --gold: #6e521c; }
+.charter-frame { border: 1.5px solid #6e521c; outline: 1.5px solid #6e521c; }
+.nr-stage { border-color: #6e521c; outline-color: #6e521c; }
