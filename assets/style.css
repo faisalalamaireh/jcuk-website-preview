@@ -1130,3 +1130,16 @@ td:last-child { white-space: normal; }
 /* =================== Darker gold for the frames and rules =================== */
 :root { --gold: #8c6a2b; }
 .charter-frame { border-color: #8c6a2b; outline-color: #8c6a2b; }
+
+/* =================== News: each story in its own bordered card =================== */
+.nr-list { border-top: 0; display: flex; flex-direction: column; gap: 12px; }
+.nr-row a { border: 1px solid #d9ccb2; border-radius: 10px; background: #fbf8f1; padding: 16px; }
+.nr-row a:hover, .nr-row.is-active a { background: #efe7d7; border-color: var(--gold); }
+.nr-row.is-active a { box-shadow: inset 4px 0 0 var(--gold); }
+html[dir="rtl"] .nr-row.is-active a { box-shadow: inset -4px 0 0 var(--gold); }
+.nr-stage { border: 1px solid var(--gold); outline: 1px solid var(--gold); outline-offset: 5px; border-radius: 6px; overflow: hidden; }
+@media (max-width: 900px) {
+  .nr-list { gap: 12px; }
+  .nr-row a, .nr-row.has-photo a { padding: 14px; border: 1px solid #d9ccb2; border-radius: 10px; background: #fbf8f1; }
+  .nr-row.is-active a, .nr-row a:hover { background: #fbf8f1; box-shadow: none; border-color: #d9ccb2; }
+}
