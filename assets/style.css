@@ -1097,3 +1097,14 @@ td:last-child { white-space: normal; }
   .site-header .nav a { border-bottom-color: #2a3f63; }
   .brand img.brand-full { padding: 4px 8px; }
 }
+
+/* =================== Figures strip in the membership card colours =================== */
+.band-teal:has(.figures) {
+  position: relative;
+  background: radial-gradient(70% 140% at 100% 0%, rgba(214, 170, 82, .30), transparent 55%), linear-gradient(170deg, #17294a 0%, #0f1d36 60%, #0c182c 100%);
+}
+.band-teal:has(.figures)::after { content: ""; position: absolute; inset-inline: 0; bottom: 0; height: 6px; background: linear-gradient(90deg, #111 0 33.3%, #c8102e 33.3% 66.6%, #007a3d 66.6%); }
+.band-teal .figures { border-top-color: #c9a356; }
+.band-teal .figure b { color: #f8f4ea; }
+.band-teal .figure span { color: #c9d3e2; }
+.band-teal .figure + .figure { border-inline-start-color: rgba(255, 255, 255, .14); }
